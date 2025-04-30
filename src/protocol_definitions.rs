@@ -716,6 +716,7 @@ impl TryFrom<u8> for HostToken {
 
 #[derive(Copy, Clone, Debug, Default, PartialEq, Eq)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[repr(C)]
 /// LSB first Representation of FwUpdateOfferResponse
 pub struct FwUpdateOfferResponse {
     _reserved0: [u8; 3],                  // bytes 0-2
